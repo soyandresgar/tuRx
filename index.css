@@ -117,7 +117,6 @@ ol {
   display: inline-block;
   background: #fff;
   width: 100px;
-  height: 600px;
   -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
           box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
   border-bottom-right-radius: 10px;
@@ -125,9 +124,12 @@ ol {
 }
 
 .sideMenu-newDiag {
+  padding-top: 15px;
   position: relative;
   height: 64px;
   width: 100%;
+  border-bottom: 1px solid;
+  border-color: #00415750;
 }
 
 .sideMenu-newDiag-icon {
@@ -147,9 +149,12 @@ ol {
 }
 
 .sideMenu-newHist {
+  padding-top: 15px;
   position: relative;
   height: 64px;
   width: 100%;
+  border-bottom: 1px solid;
+  border-color: #00415750;
 }
 
 .sideMenu-newHist-icon {
@@ -166,5 +171,26 @@ ol {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   background: #f3f3f3;
+}
+
+.sideMenu-favorite {
+  background-color: #004157;
+  padding-top: 10px;
+  position: relative;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid;
+  border-color: #00415750;
+  border-bottom-right-radius: 10px;
+}
+
+.sideMenu-favorite-icon {
+  background-image: url("images/favorite.svg");
+  width: auto;
+  height: 30px;
+  position: relative;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /*# sourceMappingURL=index.css.map */

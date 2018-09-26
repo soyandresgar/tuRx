@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700,800,900');
 
 $dark-blue: #004157;
+$dark-blue-soft: #00415750;
 $principal-background-color: #F8F9FF;
 $secondary-background-color: #fff;
 $font: 'Muli',
@@ -124,15 +125,17 @@ ol {
     display: inline-block;
     background: $secondary-background-color;
     width: 100px;
-    height: 600px;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 
     &-newDiag {
+        padding-top: 15px;
         position: relative;
         height: 64px;
         width: 100%;
+        border-bottom: 1px solid;
+        border-color: $dark-blue-soft;
 
         &-icon {
             background-image: url("images/new-diag.svg");
@@ -151,9 +154,12 @@ ol {
     }
 
     &-newHist {
+        padding-top: 15px;
         position: relative;
         height: 64px;
         width: 100%;
+        border-bottom: 1px solid;
+        border-color: $dark-blue-soft;
 
         &-icon {
             background-image: url("images/new-hist.svg");
@@ -169,5 +175,26 @@ ol {
     &-newHist:hover {
         transition: 0.2s;
         background: rgb(243, 243, 243);
+    }
+
+    &-favorite {
+        background-color: $dark-blue;
+        padding-top: 10px;
+        position: relative;
+        height: 40px;
+        width: 100%;
+        border-bottom: 1px solid;
+        border-color: $dark-blue-soft;
+        border-bottom-right-radius: 10px;
+
+        &-icon {
+            background-image: url("images/favorite.svg");
+            width: auto;
+            height: 30px;
+            position: relative;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 }
