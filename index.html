@@ -111,9 +111,9 @@
         </section>
 
 
-        <!-- Se desarrolla el dashboard central 
+        <!-- Se desarrolla el dashboard central -->
 
-        <section class="dashboard">
+        <section class="dashboard" id="dashboard">
 
             <div class="element">
 
@@ -147,8 +147,6 @@
 
         </section>
     </div>
-
--->
         <script>
             function myFunction() {
 
@@ -156,11 +154,13 @@
                 const sideMenu = document.getElementById("sideMenu");
                 const sideMenuMore = document.getElementById("sideMenuMore");
                 const sideMenuFavorite = document.getElementById("sideMenuFavorite");
-                
+                const dashboard = document.getElementById("dashboard");
+ 
                 sideMenuFull.style.marginLeft = '-4px';
                 sideMenuMore.style.zIndex = '-4';
                 sideMenu.style.borderRadius = "0px"
                 sideMenuFavorite.style.borderRadius = "0px"
+                dashboard.style.width= '75%';
             }
 
             function myFunction2() {
