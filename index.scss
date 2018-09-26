@@ -18,13 +18,6 @@ body {
     background: $principal-background-color;
 }
 
-.header {
-    background: $secondary-background-color;
-    width: 100%;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.03);
-    display: inline-block;
-}
-
 .header-logo {
     margin: 0 0 0 2%;
     padding: 10px;
@@ -32,57 +25,47 @@ body {
     width: 8%;
 }
 
-.header-user {
-    float: right;
-    width: 20%;
-    height: 100%;
-    position: relative;
-}
+.header {
+    background: $secondary-background-color;
+    width: 100%;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.03);
+    display: inline-block;
 
-div.header-user-userPhoto {
-    padding: 20px;
-    background-image: url("../images/user.png");
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    float: left;
-    border: 4px solid;
-    border-color: $dark-blue;
-    border-radius: 50%;
-}
+    &-user {
+        float: right;
+        width: 40%;
+        height: 100%;
+        position: relative;
 
-.header-user-userInfo {
-    float: left;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    padding: 10px;
-}
+        &-userPhoto {
+            background-image: url("images/user.png");
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            float: left;
+        }
 
-.header-user-userName {
-    font-size: 1.1em;
-    font-weight: 900;
-    color: $blue;
-}
+        &-userInfo {
 
-.header-user-userAgency {
-    font-size: 0.9em;
-    font-weight: 200;
-    color: $blue;
-}
+            font-size: 1.1em;
+            font-weight: 900;
+            color: $dark-blue;
 
-.header-user {
-    float: right;
-    width: 20%;
-    height: 100%;
-    position: relative;
+            text-transform: uppercase;
+            float: left;
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: right;
+        }
+    }
 }
 
 .top-menu {
-    display: inline-block;
+    display: table;
     background: $secondary-background-color;
     width: 100%;
-    height: 50px;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
     margin: auto;
 }
@@ -104,11 +87,13 @@ ol {
     font-weight: 700;
     padding: 10px 15px;
     display: block;
+    padding: 13px;
 }
 
 .top-menu-nav li a:hover {
     background: $dark-blue;
     color: white;
+    border-radius: 2px;
 }
 
 .top-menu-nav li ul {
@@ -134,11 +119,55 @@ ol {
     top: 0px;
 }
 
-.side-menu {
+.sideMenu {
     margin-top: 50px;
     display: inline-block;
     background: $secondary-background-color;
     width: 100px;
     height: 600px;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    &-newDiag {
+        position: relative;
+        height: 64px;
+        width: 100%;
+
+        &-icon {
+            background-image: url("images/new-diag.svg");
+            width: auto;
+            height: 40px;
+            position: relative;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &-newDiag:hover {
+        transition: 0.2s;
+        background: rgb(243, 243, 243);
+    }
+
+    &-newHist {
+        position: relative;
+        height: 64px;
+        width: 100%;
+
+        &-icon {
+            background-image: url("images/new-hist.svg");
+            width: auto;
+            height: 40px;
+            position: relative;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &-newHist:hover {
+        transition: 0.2s;
+        background: rgb(243, 243, 243);
+    }
 }
