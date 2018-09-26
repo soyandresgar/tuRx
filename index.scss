@@ -209,7 +209,6 @@ ol {
         width: 100%;
         border-bottom: 1px solid;
         border-color: $dark-blue-soft;
-        border-bottom-right-radius: 10px;
 
         &-icon {
             background-image: url("images/favorite.svg");
@@ -257,7 +256,7 @@ ol {
     z-index: -10;
     vertical-align: top;
     margin-top: 50px;
-    margin-left: -100%;
+    margin-left: -30%;
     display: inline-block;
     background: $secondary-background-color;
     width: 200px;
@@ -267,12 +266,38 @@ ol {
     border-top-right-radius: 10px;
     transition: 0.2s;
 
+    &-less {
+        background-color: $dark-blue;
+        padding-top: 10px;
+        position: relative;
+        height: 30px;
+        width: 25px;
+        border-bottom: 1px solid;
+        border-color: $dark-blue-soft;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        float: left;
+        right: -100%;
+        top: -100px;
+
+        &-icon {
+            background-image: url("images/less.svg");
+            width: auto;
+            height: 20px;
+            position: relative;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
     &-text {
         font-weight: 700;
         color: $dark-blue;
         padding: 10px;
         text-transform: uppercase;
         font-size: 0.8em;
+        background: #fff;
 
         &-white {
             color: #fff;
@@ -290,16 +315,6 @@ ol {
         width: 100%;
         border-bottom: 1px solid;
         border-color: $dark-blue-soft;
-
-        &p {
-            background-image: url("images/new-diag.svg");
-            width: 100px;
-            height: 40px;
-            position: relative;
-            background-size: auto;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
     }
 
     &-newDiag:hover {
@@ -314,16 +329,6 @@ ol {
         width: 100%;
         border-bottom: 1px solid;
         border-color: $dark-blue-soft;
-
-        &-icon {
-            background-image: url("images/new-hist.svg");
-            width: auto;
-            height: 20px;
-            position: relative;
-            background-size: auto;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
     }
 
     &-newHist:hover {
@@ -340,15 +345,6 @@ ol {
         border-bottom: 1px solid;
         border-color: $dark-blue-soft;
         border-bottom-right-radius: 10px;
-        &-icon {
-            background-image: url("images/favorite.svg");
-            width: auto;
-            height: 30px;
-            position: relative;
-            background-size: auto;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
     }
 
     &-more {
@@ -388,7 +384,7 @@ ol {
 .dashboard {
     right: 0;
     top: 0;
-    width: 80%;
+    width: 88%;
     height: 700px;
     background: #fff;
     position: absolute;
@@ -399,6 +395,7 @@ ol {
 }
 
 .element {
+    position: relative;
     width: 100%;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
     font-weight: 600;
@@ -423,14 +420,15 @@ ol {
     }
 
     &-closeButton {
+        position: absolute;
         display: inline-block;
         width: 30px;
-        height: 100%;
         color: #fff;
         padding: 6px;
         background: $dark-blue;
         border-bottom-right-radius: 5px;
         border-top-right-radius: 5px;
         text-align: center;
+        right: 0;
     }
 }

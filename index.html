@@ -59,6 +59,7 @@
 
     <div class="dash">
 
+        <!-- Side menu mini -->
 
         <section class="sideMenu" id="sideMenu">
             <a href="">
@@ -75,14 +76,12 @@
                 </div>
             </a>
 
-            <a href="">
-                <div class="sideMenu-favorite" id="sideMenuFavorite">
-                    <div class="sideMenu-favorite-icon">
-                    </div>
+            <div class="sideMenu-favorite" id="sideMenuFavorite">
+                <div class="sideMenu-favorite-icon">
                 </div>
-            </a>
+            </div>
 
-            <div class="sideMenu-more" id="sideMenuMore" onclick="myFunction()">
+            <div class="sideMenu-more" id="sideMenuMore" onclick="show()">
                 <div class="sideMenu-more-icon">
                 </div>
             </div>
@@ -91,23 +90,30 @@
         <!-- Side menu full -->
 
         <section class="sideMenuFull" id="sideMenuFull">
-            <a href="">
-                <div class="sideMenuFull-newDiag">
-                    <p class="sideMenuFull-text">Nuevo diagnostico</p>
-                </div>
+            <div>
+                <a href="">
+                    <div class="sideMenuFull-newDiag">
+                        <p class="sideMenuFull-text">Nuevo diagnostico</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="sideMenuFull-newHist">
+                        <p class="sideMenuFull-text">Nueva historia</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="sideMenuFull-favorite">
+                        <p class="sideMenuFull-text-white">Favoritos</p>
+                    </div>
+            </div>
             </a>
 
-            <a href="">
-                <div class="sideMenuFull-newHist">
-                    <p class="sideMenuFull-text">Nueva historia</p>
+            <div class="sideMenuFull-less" id="sideMenuLess" onclick="hide()">
+                <div class="sideMenuFull-less-icon">
                 </div>
-            </a>
-
-            <a href="">
-                <div class="sideMenuFull-favorite">
-                    <p class="sideMenuFull-text-white">Favoritos</p>
-                </div>
-            </a>
+            </div>
         </section>
 
 
@@ -147,28 +153,31 @@
 
         </section>
     </div>
-        <script>
-            function myFunction() {
+    <script>
+        const sideMenuFull = document.getElementById("sideMenuFull");
+        const sideMenu = document.getElementById("sideMenu");
+        const sideMenuMore = document.getElementById("sideMenuMore");
+        const sideMenuFavorite = document.getElementById("sideMenuFavorite");
+        const dashboard = document.getElementById("dashboard");
 
-                const sideMenuFull = document.getElementById("sideMenuFull");
-                const sideMenu = document.getElementById("sideMenu");
-                const sideMenuMore = document.getElementById("sideMenuMore");
-                const sideMenuFavorite = document.getElementById("sideMenuFavorite");
-                const dashboard = document.getElementById("dashboard");
- 
-                sideMenuFull.style.marginLeft = '-4px';
-                sideMenuMore.style.zIndex = '-4';
-                sideMenu.style.borderRadius = "0px"
-                sideMenuFavorite.style.borderRadius = "0px"
-                dashboard.style.width= '75%';
-            }
+        function show() {
 
-            function myFunction2() {
+            sideMenuFull.style.marginLeft = '-4px';
+            sideMenuMore.style.zIndex = '-4';
+            sideMenu.style.borderRadius = "0px"
+            sideMenuFavorite.style.borderRadius = "0px"
+            dashboard.style.width = '75%';
+        }
 
-                const elem = document.getElementById("sideMenuFull");
-                elem.style.marginLeft = '-100px';
-            }
-        </script>
+        function hide() {
+
+            const elem = document.getElementById("sideMenuFull");
+            sideMenuFull.style.marginLeft = '-30%';
+            sideMenuMore.style.zIndex = '1';
+            sideMenu.style.borderRadius = "10px"
+            dashboard.style.width = '88%';
+        }
+    </script>
 
 </body>
 
