@@ -20,13 +20,14 @@
                 <p class="header-user-userInfo-userID">NIT. 1144202182</p>
             </div>
 
-            <div class="header-user-userPhoto">
+            <div class="header-user-userPhoto" style="background-image: url('images/user.png'); background-size: cover;
+">
             </div>
 
         </div>
     </section>
 
-    <section class="top-menu">
+    <section class=" top-menu">
         <div class="top-menu-div">
             <ul class="top-menu-div-nav">
                 <li><a href="">Facturación Hospitalaria</a></li>
@@ -59,7 +60,7 @@
     <div class="dash">
 
 
-        <section class="sideMenu">
+        <section class="sideMenu" id="sideMenu">
             <a href="">
                 <div class="sideMenu-newDiag">
                     <div class="sideMenu-newDiag-icon">
@@ -75,19 +76,42 @@
             </a>
 
             <a href="">
-                <div class="sideMenu-favorite">
+                <div class="sideMenu-favorite" id="sideMenuFavorite">
                     <div class="sideMenu-favorite-icon">
                     </div>
                 </div>
             </a>
 
+            <div class="sideMenu-more" id="sideMenuMore" onclick="myFunction()">
+                <div class="sideMenu-more-icon">
+                </div>
+            </div>
+        </section>
+
+        <!-- Side menu full -->
+
+        <section class="sideMenuFull" id="sideMenuFull">
             <a href="">
-                <div class="sideMenu-more">
-                    <div class="sideMenu-more-icon">
-                    </div>
+                <div class="sideMenuFull-newDiag">
+                    <p class="sideMenuFull-text">Nuevo diagnostico</p>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="sideMenuFull-newHist">
+                    <p class="sideMenuFull-text">Nueva historia</p>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="sideMenuFull-favorite">
+                    <p class="sideMenuFull-text-white">Favoritos</p>
                 </div>
             </a>
         </section>
+
+
+        <!-- Se desarrolla el dashboard central 
 
         <section class="dashboard">
 
@@ -116,10 +140,35 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="element-closeButton">x</div>
+
             </div>
 
         </section>
     </div>
+
+-->
+        <script>
+            function myFunction() {
+
+                const sideMenuFull = document.getElementById("sideMenuFull");
+                const sideMenu = document.getElementById("sideMenu");
+                const sideMenuMore = document.getElementById("sideMenuMore");
+                const sideMenuFavorite = document.getElementById("sideMenuFavorite");
+                
+                sideMenuFull.style.marginLeft = '-4px';
+                sideMenuMore.style.zIndex = '-4';
+                sideMenu.style.borderRadius = "0px"
+                sideMenuFavorite.style.borderRadius = "0px"
+            }
+
+            function myFunction2() {
+
+                const elem = document.getElementById("sideMenuFull");
+                elem.style.marginLeft = '-100px';
+            }
+        </script>
 
 </body>
 

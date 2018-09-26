@@ -2,6 +2,9 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  text-decoration: none;
 }
 
 body {
@@ -31,13 +34,12 @@ body {
   width: 40%;
   height: 100%;
   position: relative;
+  margin-top: 10px;
 }
 
 .header-user-userPhoto {
-  background-image: url("images/user.png");
   width: 50px;
   height: 50px;
-  background-size: cover;
   float: left;
 }
 
@@ -70,14 +72,20 @@ body {
   -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
           box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
   margin: auto;
+  z-index: 99;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
 }
 
 .top-menu-div {
   margin: auto;
   width: 100%;
+  z-index: 99;
+  width: 90%;
+  max-width: 1000px;
 }
 
 .top-menu-div-nav li a {
+  z-index: 99;
   background: white;
   color: #004157;
   text-decoration: none;
@@ -94,6 +102,7 @@ body {
 }
 
 .top-menu-div-nav li ul {
+  z-index: 99;
   display: none;
   position: absolute;
   min-width: 300px;
@@ -121,6 +130,11 @@ ol {
   list-style: none;
 }
 
+.side {
+  position: relative;
+  vertical-align: top;
+}
+
 .sideMenu {
   margin-top: 50px;
   display: inline-block;
@@ -136,7 +150,7 @@ ol {
 .sideMenu-newDiag {
   padding-top: 15px;
   position: relative;
-  height: 64px;
+  height: 40px;
   width: 100%;
   border-bottom: 1px solid;
   border-color: #00415750;
@@ -145,7 +159,7 @@ ol {
 .sideMenu-newDiag-icon {
   background-image: url("images/new-diag.svg");
   width: auto;
-  height: 40px;
+  height: 30px;
   position: relative;
   background-size: auto;
   background-repeat: no-repeat;
@@ -161,7 +175,7 @@ ol {
 .sideMenu-newHist {
   padding-top: 15px;
   position: relative;
-  height: 64px;
+  height: 40px;
   width: 100%;
   border-bottom: 1px solid;
   border-color: #00415750;
@@ -170,7 +184,7 @@ ol {
 .sideMenu-newHist-icon {
   background-image: url("images/new-hist.svg");
   width: auto;
-  height: 40px;
+  height: 30px;
   position: relative;
   background-size: auto;
   background-repeat: no-repeat;
@@ -217,9 +231,142 @@ ol {
   float: left;
   right: -100%;
   top: -100px;
+  opacity: 1;
+  z-index: 4;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .sideMenu-more-icon {
+  background-image: url("images/more.svg");
+  width: auto;
+  height: 20px;
+  position: relative;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sideMenuFull {
+  z-index: -10;
+  vertical-align: top;
+  margin-top: 50px;
+  margin-left: -100%;
+  display: inline-block;
+  background: #fff;
+  width: 200px;
+  height: 100%;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.sideMenuFull-text {
+  font-weight: 700;
+  color: #004157;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.sideMenuFull-text-white {
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 12px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.sideMenuFull-newDiag {
+  padding-top: 15px;
+  position: relative;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid;
+  border-color: #00415750;
+}
+
+.sideMenuFull-newDiagp {
+  background-image: url("images/new-diag.svg");
+  width: 100px;
+  height: 40px;
+  position: relative;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sideMenuFull-newDiag:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background: #f3f3f3;
+}
+
+.sideMenuFull-newHist {
+  padding-top: 15px;
+  position: relative;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid;
+  border-color: #00415750;
+}
+
+.sideMenuFull-newHist-icon {
+  background-image: url("images/new-hist.svg");
+  width: auto;
+  height: 20px;
+  position: relative;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sideMenuFull-newHist:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background: #f3f3f3;
+}
+
+.sideMenuFull-favorite {
+  background-color: #004157;
+  padding-top: 10px;
+  position: relative;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid;
+  border-color: #00415750;
+  border-bottom-right-radius: 10px;
+}
+
+.sideMenuFull-favorite-icon {
+  background-image: url("images/favorite.svg");
+  width: auto;
+  height: 30px;
+  position: relative;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sideMenuFull-more {
+  background-color: #004157;
+  padding-top: 10px;
+  position: relative;
+  height: 30px;
+  width: 25px;
+  border-bottom: 1px solid;
+  border-color: #00415750;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  float: left;
+  right: -100%;
+  top: -100px;
+}
+
+.sideMenuFull-more-icon {
   background-image: url("images/more.svg");
   width: auto;
   height: 20px;
@@ -272,5 +419,18 @@ ol {
   padding: 6px 20px;
   border-right: 0.5px solid;
   border-color: #00415750;
+}
+
+.element-closeButton {
+  display: inline-block;
+  width: 30px;
+  height: 100%;
+  color: #fff;
+  padding: 6px;
+  background: #004157;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  float: right;
+  text-align: center;
 }
 /*# sourceMappingURL=index.css.map */
