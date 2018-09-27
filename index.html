@@ -60,69 +60,74 @@
     <div class="dash">
 
         <!-- Side menu mini -->
+        <section class="sideBar">
 
-        <section class="sideMenu" id="sideMenu">
-            <a href="">
-                <div class="sideMenu-newDiag">
-                    <div class="sideMenu-newDiag-icon">
+            <section class="sideMenu" id="sideMenu">
+                <a href="">
+                    <div class="sideMenu-newDiag">
+                        <div class="sideMenu-newDiag-icon">
+                        </div>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="sideMenu-newHist">
+                        <div class="sideMenu-newHist-icon">
+                        </div>
+                    </div>
+                </a>
+
+                <div class="sideMenu-favorite" id="sideMenuFavorite">
+                    <div class="sideMenu-favorite-icon">
                     </div>
                 </div>
-            </a>
 
-            <a href="">
-                <div class="sideMenu-newHist">
-                    <div class="sideMenu-newHist-icon">
+                <div class="sideMenu-more" id="sideMenuMore" onclick="show()">
+                    <div class="sideMenu-more-icon">
                     </div>
                 </div>
-            </a>
+            </section>
 
-            <div class="sideMenu-favorite" id="sideMenuFavorite">
-                <div class="sideMenu-favorite-icon">
+            <!-- Side menu full -->
+            <section class="sideMenuFull" id="sideMenuFull">
+                <a href="">
+                    <div class="sideMenuFull-newDiag">
+                        <p class="sideMenuFull-text">Nuevo diagnostico</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="sideMenuFull-newHist">
+                        <p class="sideMenuFull-text">Nueva historia</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="sideMenuFull-favorite">
+                        <p class="sideMenuFull-text-white">Favoritos</p>
+                    </div>
+                </a>
+
+                <div class="sideMenuFull-less" id="sideMenuLess" onclick="hide()">
+                    <div class="sideMenuFull-less-icon">
+                    </div>
                 </div>
+            </section>
+
+
+            <div class="favoritesList" id="favoritesList">
+                <a href="">Agregar nuevo favorito</a>
+                <ul>
+                    <li>ítem 1</li>
+                    <li>ítem 2</li>
+                    <li>ítem 3</li>
+                    <li>ítem 4</li>
+                    <li>ítem 5</li>
+                    <li>ítem 6</li>
+                </ul>
             </div>
 
-            <div class="sideMenu-more" id="sideMenuMore" onclick="show()">
-                <div class="sideMenu-more-icon">
-                </div>
-            </div>
         </section>
-
-        <!-- Side menu full -->
-        <section class="sideMenuFull" id="sideMenuFull">
-            <a href="">
-                <div class="sideMenuFull-newDiag">
-                    <p class="sideMenuFull-text">Nuevo diagnostico</p>
-                </div>
-            </a>
-
-            <a href="">
-                <div class="sideMenuFull-newHist">
-                    <p class="sideMenuFull-text">Nueva historia</p>
-                </div>
-            </a>
-
-            <a href="">
-                <div class="sideMenuFull-favorite">
-                    <p class="sideMenuFull-text-white">Favoritos</p>
-                </div>
-            </a>
-
-            <div class="sideMenuFull-less" id="sideMenuLess" onclick="hide()">
-                <div class="sideMenuFull-less-icon">
-                </div>
-            </div>
-        </section>
-
-        <div class="favoritesList">
-            <ul>
-                <li>ítem 1</li>
-                <li>ítem 2</li>
-                <li>ítem 3</li>
-                <li>ítem 4</li>
-                <li>ítem 5</li>
-                <li>ítem 6</li>
-            </ul>
-        </div>
         <!-- Se desarrolla el dashboard central -->
 
         <section class="dashboard" id="dashboard">
@@ -131,60 +136,56 @@
 
                 <div class="element-selected">
                     <p>Opción 1</p>
-                    <div class="botón ce">
-                        <div class="icon">
+                    <a href="">
+                        <div class="element-selected-closeButton">
+                            x
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="element-noSelected">
                     <p>Opción 2</p>
-                    <div class="botón ce">
-                        <div class="icon">
+                    <a href="">
+                        <div class="element-noSelected-closeButton">
+                            x
                         </div>
-                    </div>
+                    </a>
                 </div>
-
-                <div class="element-noSelected">
-                    <p>Opción 3</p>
-                    <div class="botón ce">
-                        <div class="icon">
-                        </div>
-                    </div>
-                </div>
-
                 <div class="element-closeButton">x</div>
 
             </div>
 
         </section>
-    </div>
-    <script>
-        const sideMenuFull = document.getElementById("sideMenuFull");
-        const sideMenu = document.getElementById("sideMenu");
-        const sideMenuMore = document.getElementById("sideMenuMore");
-        const sideMenuFavorite = document.getElementById("sideMenuFavorite");
-        const dashboard = document.getElementById("dashboard");
+        <script>
+            const sideMenuFull = document.getElementById("sideMenuFull");
+            const sideMenu = document.getElementById("sideMenu");
+            const sideMenuMore = document.getElementById("sideMenuMore");
+            const sideMenuFavorite = document.getElementById("sideMenuFavorite");
+            const dashboard = document.getElementById("dashboard");
+            const sideBar = document.getElementById("sideBar");
+            const favoritesList = document.getElementById("favoritesList");
 
-        function show() {
+            function show() {
 
-            sideMenuFull.style.marginLeft = '70px';
-            sideMenuMore.style.opacity = '0';
-            sideMenu.style.borderRadius = "0px"
-            sideMenuFavorite.style.borderRadius = "0px"
-            dashboard.style.width = '75%';
-            sideMenu.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 0.0)';
+                sideMenuFull.style.marginLeft = '70px';
+                sideMenuMore.style.opacity = '0';
+                sideMenu.style.borderRadius = "0px"
+                sideMenuFavorite.style.borderRadius = "0px"
+                dashboard.style.width = '75%';
+                sideMenu.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 0.0)';
+                favoritesList.style.marginLeft = "0px";
+            }
 
-        }
-
-        function hide() {
-            const elem = document.getElementById("sideMenuFull");
-            sideMenuFull.style.marginLeft = '-30%';
-            sideMenuMore.style.opacity = '1';
-            sideMenu.style.borderRadius = "10px"
-            dashboard.style.width = '88%';
-        }
-    </script>
+            function hide() {
+                const elem = document.getElementById("sideMenuFull");
+                sideMenuFull.style.marginLeft = '-30%';
+                sideMenuMore.style.opacity = '1';
+                sideMenu.style.borderRadius = "10px"
+                dashboard.style.width = '88%';
+                sideMenu.style.boxShadow = '0px 3px 6px rgba(0, 0, 0, 0.03)';
+                favoritesList.style.marginLeft = "-30%";
+            }
+        </script>
 
 </body>
 

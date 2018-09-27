@@ -136,11 +136,11 @@ ol {
 }
 
 .sideMenu {
+  background: #fff;
   position: fixed;
   z-index: 99;
   margin-top: 0px;
   display: inline-block;
-  background: #fff;
   width: 70px;
   height: 100%;
   -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
@@ -247,15 +247,13 @@ ol {
   z-index: 0;
   vertical-align: top;
   margin-top: 0px;
-  margin-left: -200px;
+  margin-left: -30%;
   display: inline-block;
-  background: #fff;
   width: 200px;
   height: 100%;
-  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
-          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
+  background: #fff;
 }
 
 .sideMenuFull-less {
@@ -289,7 +287,6 @@ ol {
   padding: 10px;
   text-transform: uppercase;
   font-size: 0.8em;
-  background: #fff;
 }
 
 .sideMenuFull-text-white {
@@ -362,15 +359,44 @@ ol {
   background-position: center;
 }
 
-.favoritesList {
-  padding: 15px;
-  width: 88%;
-  height: 700px;
+.sideBar {
   background: #fff;
+  width: 70px;
+  height: 100px;
+  position: relative;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
+}
+
+.favoritesList {
+  font-weight: 700;
+  margin: 0 auto;
+  width: 270px;
   vertical-align: top;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.03);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.03);
+  z-index: 200;
+  position: fixed;
+  margin-left: -30%;
+  margin-top: 200px;
+}
+
+.favoritesList ul {
+  margin-top: 20px;
+}
+
+.favoritesList ul li {
+  padding: 10px 30px;
+}
+
+.favoritesList ul li:hover {
+  padding: 10px 30px;
+  background: #ececec;
+}
+
+.favoritesList a {
+  color: #004157;
+  text-align: center;
+  margin: 0px 40px 0px 40px;
 }
 
 .dash {
@@ -402,6 +428,7 @@ ol {
 }
 
 .element-selected {
+  position: relative;
   display: inline-block;
   width: 15%;
   background: #004157;
@@ -410,7 +437,21 @@ ol {
   padding: 6px 20px;
 }
 
+.element-selected-closeButton {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+.element-selected a {
+  color: #fff;
+  font-weight: 700;
+}
+
 .element-noSelected {
+  position: relative;
   display: inline-block;
   width: 8%;
   background: #ffffff;
@@ -418,6 +459,19 @@ ol {
   padding: 6px 20px;
   border-right: 0.5px solid;
   border-color: #00415750;
+}
+
+.element-noSelected-closeButton {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+.element-noSelected a {
+  color: #004157;
+  font-weight: 700;
 }
 
 .element-closeButton {

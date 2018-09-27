@@ -144,11 +144,11 @@ ol {
 }
 
 .sideMenu {
+    background: #fff;
     position: fixed;
     z-index: 99;
     margin-top: 0px;
     display: inline-block;
-    background: $secondary-background-color;
     width: 70px;
     height: 100%;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
@@ -256,14 +256,13 @@ ol {
     z-index: 0;
     vertical-align: top;
     margin-top: 0px;
-    margin-left: -200px;
+    margin-left: -30%;
     display: inline-block;
-    background: $secondary-background-color;
     width: 200px;
     height: 100%;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    background: #fff;
 
     &-less {
         background-color: $dark-blue;
@@ -296,7 +295,6 @@ ol {
         padding: 10px;
         text-transform: uppercase;
         font-size: 0.8em;
-        background: #fff;
 
         &-white {
             color: #fff;
@@ -370,14 +368,43 @@ ol {
     }
 }
 
-.favoritesList{
-    padding: 15px;
-    width: 88%;
-    height: 700px;
+.sideBar {
     background: #fff;
+    width: 70px;
+    height: 100px;
+    position: relative;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
+}
+
+.favoritesList {
+    font-weight: 700;
+    margin: 0 auto;
+    width: 270px;
     vertical-align: top;
     border-radius: 10px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.03);    
+    z-index: 200;
+    position: fixed;
+    margin-left: -30%;
+    margin-top: 200px;
+}
+
+.favoritesList ul {
+    margin-top: 20px;
+}
+
+.favoritesList ul li {
+    padding: 10px 30px;
+}
+
+.favoritesList ul li:hover {
+    padding: 10px 30px;
+    background: rgb(236, 236, 236);
+}
+
+.favoritesList a {
+    color: $dark-blue;
+    text-align: center;
+    margin: 0px 40px 0px 40px;
 }
 
 //estilos del dashboard
@@ -408,15 +435,30 @@ ol {
     font-weight: 600;
 
     &-selected {
+        position: relative;
         display: inline-block;
         width: 15%;
         background: #004157;
         color: #fff;
         border-radius: 5px;
         padding: 6px 20px;
+
+        &-closeButton {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px 10px;
+        }
+
+        & a {
+            color: #fff;
+            font-weight: 700;
+        }
     }
 
     &-noSelected {
+        position: relative;
         display: inline-block;
         width: 8%;
         background: #ffffff;
@@ -424,6 +466,19 @@ ol {
         padding: 6px 20px;
         border-right: 0.5px solid;
         border-color: $dark-blue-soft;
+
+        &-closeButton {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px 10px;
+        }
+
+        & a {
+            color: $dark-blue;
+            font-weight: 700;
+        }
     }
 
     &-closeButton {
