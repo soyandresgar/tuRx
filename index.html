@@ -88,26 +88,23 @@
         </section>
 
         <!-- Side menu full -->
-
         <section class="sideMenuFull" id="sideMenuFull">
-            <div>
-                <a href="">
-                    <div class="sideMenuFull-newDiag">
-                        <p class="sideMenuFull-text">Nuevo diagnostico</p>
-                    </div>
-                </a>
+            <a href="">
+                <div class="sideMenuFull-newDiag">
+                    <p class="sideMenuFull-text">Nuevo diagnostico</p>
+                </div>
+            </a>
 
-                <a href="">
-                    <div class="sideMenuFull-newHist">
-                        <p class="sideMenuFull-text">Nueva historia</p>
-                    </div>
-                </a>
+            <a href="">
+                <div class="sideMenuFull-newHist">
+                    <p class="sideMenuFull-text">Nueva historia</p>
+                </div>
+            </a>
 
-                <a href="">
-                    <div class="sideMenuFull-favorite">
-                        <p class="sideMenuFull-text-white">Favoritos</p>
-                    </div>
-            </div>
+            <a href="">
+                <div class="sideMenuFull-favorite">
+                    <p class="sideMenuFull-text-white">Favoritos</p>
+                </div>
             </a>
 
             <div class="sideMenuFull-less" id="sideMenuLess" onclick="hide()">
@@ -116,7 +113,16 @@
             </div>
         </section>
 
-
+        <div class="favoritesList">
+            <ul>
+                <li>ítem 1</li>
+                <li>ítem 2</li>
+                <li>ítem 3</li>
+                <li>ítem 4</li>
+                <li>ítem 5</li>
+                <li>ítem 6</li>
+            </ul>
+        </div>
         <!-- Se desarrolla el dashboard central -->
 
         <section class="dashboard" id="dashboard">
@@ -162,18 +168,19 @@
 
         function show() {
 
-            sideMenuFull.style.marginLeft = '-4px';
-            sideMenuMore.style.zIndex = '-4';
+            sideMenuFull.style.marginLeft = '70px';
+            sideMenuMore.style.opacity = '0';
             sideMenu.style.borderRadius = "0px"
             sideMenuFavorite.style.borderRadius = "0px"
             dashboard.style.width = '75%';
+            sideMenu.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 0.0)';
+
         }
 
         function hide() {
-
             const elem = document.getElementById("sideMenuFull");
             sideMenuFull.style.marginLeft = '-30%';
-            sideMenuMore.style.zIndex = '1';
+            sideMenuMore.style.opacity = '1';
             sideMenu.style.borderRadius = "10px"
             dashboard.style.width = '88%';
         }

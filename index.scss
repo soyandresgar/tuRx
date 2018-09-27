@@ -10,7 +10,7 @@ sans-serif;
 * {
     margin: 0;
     padding: 0;
-    transition: 0.4s;
+    transition: 0.3s;
     text-decoration: none;
 }
 
@@ -144,7 +144,9 @@ ol {
 }
 
 .sideMenu {
-    margin-top: 50px;
+    position: fixed;
+    z-index: 99;
+    margin-top: 0px;
     display: inline-block;
     background: $secondary-background-color;
     width: 70px;
@@ -173,7 +175,6 @@ ol {
     }
 
     &-newDiag:hover {
-        transition: 0.2s;
         background: rgb(243, 243, 243);
     }
 
@@ -197,7 +198,6 @@ ol {
     }
 
     &-newHist:hover {
-        transition: 0.2s;
         background: rgb(243, 243, 243);
     }
 
@@ -236,7 +236,6 @@ ol {
         top: -100px;
         opacity: 1;
         z-index: 4;
-        transition: 0.2s;
 
         &-icon {
             background-image: url("images/more.svg");
@@ -253,10 +252,11 @@ ol {
 //estilos del sude menu full
 
 .sideMenuFull {
-    z-index: -10;
+    position: fixed;
+    z-index: 0;
     vertical-align: top;
-    margin-top: 50px;
-    margin-left: -30%;
+    margin-top: 0px;
+    margin-left: -200px;
     display: inline-block;
     background: $secondary-background-color;
     width: 200px;
@@ -264,7 +264,6 @@ ol {
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.048);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    transition: 0.2s;
 
     &-less {
         background-color: $dark-blue;
@@ -318,7 +317,6 @@ ol {
     }
 
     &-newDiag:hover {
-        transition: 0.2s;
         background: rgb(243, 243, 243);
     }
 
@@ -332,7 +330,6 @@ ol {
     }
 
     &-newHist:hover {
-        transition: 0.2s;
         background: rgb(243, 243, 243);
     }
 
@@ -371,6 +368,16 @@ ol {
             background-position: center;
         }
     }
+}
+
+.favoritesList{
+    padding: 15px;
+    width: 88%;
+    height: 700px;
+    background: #fff;
+    vertical-align: top;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.03);    
 }
 
 //estilos del dashboard
